@@ -1,0 +1,522 @@
+
+.Aumain{
+    margin: 0; padding: 0;
+    /* border: solid; */
+    height: fit-content;
+    margin-top: 100px;
+}
+
+.Aumain .section{
+    display: flex; flex-direction: row;
+    align-items: center; justify-content: left;
+    width: 100%;
+    /* border: solid; */
+    height: 100%;
+    /* border: solid; */
+    padding: 0 7%;
+    padding-left: 5%;
+}
+
+.Aumain .section .lists{
+    display: flex;flex-direction: column;
+    align-items: flex-start; justify-content: flex-start;
+    width: fit-content;
+    background-color: #F9FAFB;
+    height: 85vh;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.Aumain .section .lists .p1{
+    font-family: 'Lora', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 150%;
+    color: #373D4A;
+    width: 100%; display: flex; justify-content: left; text-align: left;
+}
+
+.Aumain .section .lists .p2{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #7C859D;
+    width: 85%; display: flex; justify-content: left; text-align: left;
+    margin-top: 10px;
+}
+
+.Aumain .section .lists ul{
+    display: flex; flex-direction: column; align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+    margin-top: 55px;
+}
+
+.Aumain .section .lists ul li{
+    display: flex; 
+    flex-direction: row;  
+    align-items: flex-start; justify-content: space-between;
+    width: fit-content;
+    color:  #DCDEE5;
+    gap: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.Aumain .section .lists ul li span{
+    display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+    row-gap: 5px;
+}
+
+.Aumain .section .lists ul li span:after {
+    padding: 0px;
+    /* color: #DCDEE5; */
+    /* content: "/\00a0"; */
+    height: fit-content; width: fit-content;
+    content: '\007C';
+    font-size: 20px;
+    /* border: solid; */
+    white-space: pre;
+  }
+
+.Aumain .section .lists ul li .last:after {
+    display: none;
+}
+
+.Aumain .section .lists ul li span:hover {
+
+}
+
+.Aumain .section .lists ul li i{
+    display: flex; align-items: center; justify-content: center;
+    width:60px; height: 60px;
+    border: solid 1px #DCDEE5; 
+    border-radius: 100%;
+    font-size: 28px;
+    color: #7C859D;
+}
+
+
+
+.Aumain .section .lists ul li p{
+    display: flex; align-items: center; justify-content: flex-start;
+    padding:0 30px;
+    height: 60px;
+    border: solid 1px #DCDEE5; 
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 300px;
+    color: #7C859D;
+}
+
+.Aumain .section .lists ul li p .ic{
+    border: none; padding: 0; font-size: 22px; width: fit-content; height: fit-content; align-self: center;
+    color: #7C859D;
+    margin-left: auto;
+    visibility: hidden;
+}
+
+.Aumain .section .lists ul .active{
+    color: #2F67FA;
+}
+
+.Aumain .section .lists ul .active i{
+    color: #2F67FA;
+    border-color: #2F67FA;
+    font-weight: 400;
+}
+
+.Aumain .section .lists ul .active p{
+    color: #2F67FA;
+    border-color: #2F67FA;
+    font-weight: 500;
+}
+
+.Aumain .section .lists ul .done i{
+    background-color: #F3F4F6;
+    border: none;
+}
+
+.Aumain .section .lists ul .done p{
+    background-color: #F3F4F6;
+    border: none;
+}
+
+.Aumain .section .lists ul .done p .ic{
+    visibility: visible;
+}
+
+.Aumain .section .cnt{
+    display: flex; flex-direction: row; align-items: flex-start; justify-content: space-between;
+    width: 100%;
+    /* border: solid; */
+    height: 85vh;
+    margin: 0;
+    padding: 0;
+    margin-left: 60px;
+    padding-top: 0px;
+}
+
+.Aumain .section .cnt .fl1{
+    width: 100%;
+    height: 100%; 
+    position: relative; 
+}
+
+.Aumain .section .cnt .cl{
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    gap: 12px;
+}
+
+.Aumain .section .cnt .cl{
+    font-size: 16px; color: #373D4A;
+    white-space: nowrap;
+}
+
+.Aumain .section .cnt .cl:hover{
+    background-color: rgb(47, 103, 250, 0.1);
+}
+
+.Aumain .section .cnt .cl i{
+   font-size: 18px;
+   font-weight: 200;
+   color: #7C859D;
+}
+
+.Aumain .section .cnt .frm{
+    width: 100%;
+    /* border: solid; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: scroll;
+    padding-top: 40px;
+    position: absolute;
+    background-color: white;
+}
+
+.Aumain .section .cnt .Idi{
+    padding-left: 20%;
+    padding-right: 20%;
+    margin: 0 auto;
+    row-gap: 10px;
+}
+
+.Aumain .section .cnt .BAS_prev{
+    padding-left: 10%;
+    padding-right: 20%;
+    margin: 0 auto;
+    row-gap: 10px;
+}
+
+.Aumain .section .cnt .frm::-webkit-scrollbar{
+    display: none;
+}
+
+.Aumain .section .cnt .frm .t1{
+    font-family: 'Lora', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 150%;
+    color: #373D4A;
+}
+
+.Aumain .section .cnt .frm .t2{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #373D4A;
+    margin-top: 8px;
+}
+
+.Aumain .section .cnt .frm .qs{
+    display: flex; align-items: flex-start; justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    /* border: solid; */
+    margin: 45px 0;
+    row-gap: 40px;
+}
+
+.Aumain .section .cnt .frm .qs .spq{
+    display: flex;align-items: center; justify-content: space-between;
+    flex-direction: row; 
+    width: 100%;
+    /* gap: 5%; */
+}
+
+.Aumain .section .cnt .frm .qs .spq .sp{
+    display: flex;align-items: flex-start; justify-content: space-between;
+    flex-direction: column; 
+    width: 48%; row-gap: 10px;
+}
+
+.Aumain .section .cnt .frm .qs .spq .sp label{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #373D4A;
+}
+
+.Aumain .section .cnt .frm .qs .spq .sp input{
+    width: 100%; outline: none;
+    border: solid 1px #DCDEE5;
+    border-radius: 30px;
+    padding: 0 25px;
+    height: 55px;
+}
+
+.Aumain .section .cnt .frm .qs .spq .sp2{
+    width: 100%;
+}
+
+.Aumain .section .cnt .frm .qs .spq .dt_info{
+    width: 100%;
+    display: flex; align-items: center; justify-content: flex-start;
+    background-color: #EBF0FF;
+    color: #2F67FA;
+    font-size: 15px;
+    padding: 10px 20px;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.Aumain .section .cnt .frm .qs .spq .dt_info i{
+    color: #2F67FA;
+}
+
+.Aumain .section .cnt .frm .qs .spq .line{
+    width: 100%;
+    border-top: solid 1px #C5C9D3; 
+    margin: 20px 0;
+}
+
+
+.Aumain .section .cnt .frm .qs .spq .nt{
+    width: 100%;
+    display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between;
+    border-radius: 8px;
+    border: solid 1px #C5C9D3;
+    padding: 20px;
+    row-gap: 10px;
+    background: #F9FAFB;
+}
+
+.Aumain .section .cnt .frm .qs .spq .nt .p1{
+    display: flex; align-items: center; justify-content: flex-start;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.Aumain .section .cnt .frm .qs .spq .nt .p2{
+    font-weight: 400;
+    font-size: 17px;
+    gap: 10px;
+    line-height: 150%;
+    color: #373D4A;
+}
+
+.Aumain .section .cnt .frm .qs .spq .links{
+    width: 100%; display: flex; 
+    justify-content: right;
+    gap: 13px;
+}
+
+.Aumain .section .cnt .frm .qs .spq .links .a{
+   padding: 13px 30px;
+   border: solid 2px #2F67FA;
+   border-radius: 30px;
+   font-size: 16px; font-weight: 500;
+}
+
+.Aumain .section .cnt .frm .qs .spq .links .a1{
+    color: #2F67FA;
+}
+
+.Aumain .section .cnt .frm .qs .spq .links .a2{
+    background-color: #2F67FA;
+    color: white;
+    cursor: pointer;
+}
+
+
+.Aumain .section .cnt .frm .qs .spq .sp .sp_inp{
+    width: 100%; outline: none;
+    border: 1px dashed #7C859D;
+    border-radius: 16px;
+    padding: 0;
+    height: 190px;
+    overflow: hidden;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.Aumain .section .cnt .frm .qs .spq .sp .sp_inp input{
+    width: 100%; outline: none; padding: 0; margin: 0; border-radius: 0;
+    border:  none; 
+    height: 100%;
+    position: relative;
+    opacity: 0;
+}
+
+.Aumain .section .cnt .frm .qs .spq .sp .sp_inp .msg{
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: absolute;
+    row-gap: 10px;
+    padding: 5%;
+}
+
+.Aumain .section .cnt .frm .qs .spq .sp .sp_inp .msg .p1{
+    text-align: center;
+    font-size: 16px;
+}
+
+.Aumain .section .cnt .frm .qs .spq .sp .sp_inp .msg .p2{
+    text-align: center;
+    font-size: 14px;
+    color: #7C859D;
+    width: 300px;
+    line-height: 180%;
+}
+
+
+.Aumain .section .cnt .frm .qs .spq .profile{
+    width: 100%;
+    display: flex; align-items: center; justify-content: flex-start;
+    border-radius: 8px;
+    padding: 15px 30px;
+    background: #F9FAFB;
+    gap:20px;
+
+}
+
+.Aumain .section .cnt .frm .qs .spq .profile .img{
+    display: flex; align-items: center; justify-content: center;
+    width: 75px; height: 75px;
+    border-radius: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.Aumain .section .cnt .frm .qs .spq .profile .img p{
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    font-family: 'lora', sans-serif;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    background: #5FA6F9;
+    position: absolute;
+}
+
+.Aumain .section .cnt .frm .qs .spq .profile .img .bck{
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.Aumain .section .cnt .frm .qs .spq .profile .user{
+    display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
+    row-gap: 12px;
+}
+
+.Aumain .section .cnt .frm .qs .spq .profile .user .p1{
+    font-size: 20px; font-family: 'lora', sans-serif;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0, 0.8);
+}
+
+.Aumain .section .cnt .frm .qs .spq .profile .user .p2{
+    font-size: 16px;
+}
+
+.Aumain .section .cnt .frm .qs .spq .prof{
+    width: 100%;
+    height: fit-content;
+    /* border: solid; */
+    height: fit-content;
+    display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
+
+}
+
+.Aumain .section .cnt .frm .qs .spq .prof li{
+    width: 100%;
+    /* border: solid; */
+    text-decoration: none;
+    list-style-type: none;
+    display: flex; flex-direction: row; justify-content: space-between; align-items: center;
+    padding: 20px 0;
+    border-bottom: solid 1px #C5C9D3;
+}
+
+.Aumain .section .cnt .frm .qs .spq .prof li .p1{
+    font-size: 16px;
+    color: #373D4A;
+}
+
+.Aumain .section .cnt .frm .qs .spq .prof li .p2{
+    font-family: 'lora', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #373D4A;
+    width: 330px; text-align: right;
+}
+
+.Aumain .section .cnt .frm .qs .spq .prof .li_img{
+    display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start;
+    padding: 20px 0;
+    row-gap: 20px;
+    border-bottom: solid 1px #C5C9D3;
+}
+
+.Aumain .section .cnt .frm .qs .spq .prof .li_img{
+    display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start;
+    padding: 20px 0;
+    row-gap: 20px;
+    border-bottom: solid 1px #C5C9D3;
+}
+
+.Aumain .section .cnt .frm .qs .spq .prof .li_img .img{
+    display: flex; align-items: center; justify-content:flex-start;
+    width: 100%;
+    border-radius: 10px;
+    border: solid 1px #DCDEE5;
+    padding: 20px 20px;
+    gap: 20px;
+}
+
+.Aumain .section .cnt .frm .qs .spq .prof .li_img .img img{
+    width: 50px; height: 50px;
+
+    /* border: solid; */
+}
+
+.Aumain .section .cnt .frm .qs .spq .prof .li_img .img .txt{
+    display: flex; flex-direction: column; align-items: flex-start;
+    justify-content: center;
+    row-gap: 5px;
+}
+
+.Aumain .section .cnt .frm .qs .spq .prof .li_img .img .txt .name{
+    font-weight: 600; font-size: 18px;
+    color: #373D4A;
+}
+
+.Aumain .section .cnt .frm .qs .spq .prof .li_img .img .txt .size{
+    font-weight: 400; font-size: 15px;
+    color: #373D4A;
+}
