@@ -1,8 +1,11 @@
+* {
+    transition: 300ms;
+}
+
 header{
     width: 100%;
     display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
     height: fit-content;
-    background-image: url(/src/Assets/Components/images/back_pic.svg);
 }
 
 header section{
@@ -254,7 +257,6 @@ header .div3 svg{
 .Main .section_descrpt .img{
     width: 500px;
     height: 700px;
-    background-image: url(./images/man_siiting.svg); background-size: cover; background-position: center; background-repeat: no-repeat;
     border-radius: 17px;
 }
 
@@ -591,7 +593,7 @@ text-align: center; color: #373D4A;
 .Main .section6 .content .img{
     width: 500px;
     height: 700px;
-    background-image: url(./images/seller_img.svg); background-size: cover; background-position: center; background-repeat: no-repeat;
+    background-size: cover; background-position: center; background-repeat: no-repeat;
     border-radius: 17px;
 }
 
@@ -695,17 +697,18 @@ margin-top: 10px;
     display: flex; align-items: center; justify-content: space-between;
     font-size: 20px; font-weight: 400;
     color: #18191B;
-
     /* border: solid; */
     /* margin-bottom: 20px; */
     background-color: white;
-    padding: 24px;
+    padding: 0 24px;
+    height: 60px;
 }
 
 .Main .section7 .content .scp .top i{
     font-size: 26px;
     font-weight: 100;
     color: #18191ba4;
+    
 }
 
 .Main .section7 .content .scp .answer{
@@ -717,6 +720,11 @@ margin-top: 10px;
     position: relative;
     padding: 24px;
     padding-top: 0;
+}
+
+
+.Main .section7 .content .scp .answer_none {
+    height: 0px;
 }
 
 .Main .section7 .content .scp .answer .det{
