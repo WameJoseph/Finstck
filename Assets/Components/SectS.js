@@ -1,12 +1,5 @@
 import React from 'react'
-import logo from './images/logo.svg';
 import './Authentication.css'
-import google_img from './images/Google Logo.svg'
-import str_user from './images/str_user.svg'
-import Signup_page from './Signup_page';
-import Login_page from './Login_page';
-import Forgot_password_page from './Forgot_password_page';
-import Email_confirm_page from './Email_confirm_page';
 
 const SectS = () => {
   return (

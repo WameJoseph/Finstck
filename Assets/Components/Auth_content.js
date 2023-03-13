@@ -1,8 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Auth_content.css'
-// import li_icon1 from "./im"
-import Sidenav from './Sidenav';
-import {BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Pid from './Pid.js';
 import Idi from './Idi';
 import BAS_prev from './BAS_prev';
@@ -16,6 +13,9 @@ function sidebarOpen(){
 }
 
 const Auth_content = () => {
+  const [personal, setPersonal] = useState(true)
+  const [idInfo, setIdInfo] = useState(false)
+  const [showPreview, setShowPreview] = useState(false)
   return (
     <main className='Aumain'>
         <section className='section'>
@@ -24,21 +24,53 @@ const Auth_content = () => {
                 <p className="p2">Create or accept offers at your preferred rate.</p>
 
                 <ul>
-                  <li className="active"><span><i className="material-icons-outlined">account_circle</i> </span><p>Personal information <i className="material-icons ic">check</i></p> </li>
-                  <li className="don "><span><i className="material-icons-outlined">payment</i> </span><p>ID information  <i className="material-icons ic">check</i></p> </li>
-                  <li><span className="last"><i className="material-icons-outlined">text_snippet</i> </span><p>Preview  <i className="material-icons ic">check</i></p> </li>
-
-                  {/* <li><i className="material-icons-outlined">payment</i> <p>Personal information</p></li> */}
-                  {/* <li><i className="material-icons-outlined">text_snippet</i> <p>Personal information</p></li> */}
+                  <li className={ personal ? `active` : `don` }><span><i className="material-icons-outlined">account_circle</i> </span><p>Personal information { personal && <i className="material-icons ic">check</i>}</p> </li>
+                  <li className={ idInfo ? `active` : `don` }><span><i className="material-icons-outlined">payment</i> </span><p>ID information  { idInfo && <i className="material-icons ic">check</i>}</p> </li>
+                  <li className={ showPreview ? `active` : `last` }><span><i className="material-icons-outlined">text_snippet</i> </span><p>Preview  { showPreview && <i className="material-icons ic">check</i>}</p> </li>
                 </ul>
             </div>
             <div className="cnt">
               <div className="fl1">
-                <Pid 
+                { personal && <Pid
+                  backclick={(e) => {
+                    e.preventDefault();
+                    alert(`There is no where to go to!`)
+                    return;
+                  }} 
+                  onclick={(e) => {
+                    e.preventDefault();
+                    setPersonal(false)
+                    setIdInfo(true)
+                  }}
                   display={'flex'}
-                />
-                <Idi display={'flex'} id="idi"/>
-                <BAS_prev display={'flex'} />
+                />}
+
+
+                { idInfo && <Idi
+                  backclick={(e) => {
+                    e.preventDefault();
+                    setPersonal(true)
+                    setIdInfo(false)
+                  }}
+                  onclick={(e) => {
+                    e.preventDefault();
+                    setIdInfo(false)
+                    setShowPreview(true)
+                  }}
+                 display={'flex'} id="idi"/>}
+
+
+                { showPreview && <BAS_prev
+                    backclick={(e) => {
+                      e.preventDefault();
+                      setShowPreview(false);
+                      setIdInfo(true)
+                    }}
+                    onclick={(e) => {
+                      e.preventDefault();
+                      alert(`There is no where to go to!`)
+                    }}
+                   display={'flex'} />}
               </div>
               
               <p className="cl" id="cls"><i className="fa-solid fa-x"></i> Close</p>

@@ -3,7 +3,7 @@ import {BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Auth_content from './Auth_content.js'
 
 
-function Pid({ display }){
+function Pid({ display, onclick, backclick }){
   return (
     <form action="" className="frm PID" style={{display: display, zIndex: 1,}}>
     <p className="t1">Personal information</p>
@@ -76,8 +76,8 @@ function Pid({ display }){
 
       <span className="spq">
         <div className="links">
-          <Link to={-1} className="a a1">Go Back</Link>
-          <button type="submit" className="a a2">Save & continue</button>
+          <button onClick={backclick} className="a a1">Go Back</button>
+          <button onClick={onclick} type="submit" className="a a2">Save & continue</button>
         </div>
       </span>
 

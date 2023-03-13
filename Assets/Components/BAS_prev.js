@@ -1,17 +1,11 @@
 import React from 'react'
-import {BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Auth_content from './Auth_content.js'
-import upload_img from './images/upload.svg';
-import bk_img1 from './images/blg_img.svg'
 import Profp from './Profp.js';
-import Profp_img from './Profp_img.js';
-import prof_img from './images/file_img.svg'
 
 
 
 
 
-function BAS_prev({ display }){
+function BAS_prev({ display, onclick, backclick }){
   return (
     <form action="" className="frm BAS_prev" style={{display: display,}}>
     <p className="t1">Confirm details</p>
@@ -42,8 +36,6 @@ function BAS_prev({ display }){
               <Profp p1='Address' p2='4517 Washington Ave. Manchester, Kentucky 39495' />
               <Profp p1='ID Type' p2='International passport' />
               <Profp p1='Issuing country' p2='Nigeria' />
-              <Profp_img p1='ID Upload' img_name='' />
-              <Profp_img p1='Finstack requested selfie' img_name='' />
 
 
             </ul>
@@ -51,8 +43,8 @@ function BAS_prev({ display }){
 
         <span className="spq">
           <div className="links">
-            <Link to={-1} className="a a1">Back</Link>
-            <button type="submit" className="a a2">Save & continue</button>
+            <button onClick={backclick} className="a a1">Back</button>
+            <button onClick={onclick} type="submit" className="a a2">Save & continue</button>
           </div>
         </span>
 

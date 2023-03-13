@@ -6,7 +6,7 @@ import upload_img from './images/upload.svg';
 
 
 
-function Idi({ display }){
+function Idi({ display, onclick, backclick }){
   return (
     <form action="" className="frm Idi" style={{display: display,}}>
     <p className="t1">Identity information</p>
@@ -67,8 +67,8 @@ function Idi({ display }){
 
       <span className="spq">
         <div className="links">
-          <Link to={-1} className="a a1">Back</Link>
-          <button type="submit" className="a a2">Save & continue</button>
+          <button onClick={backclick} className="a a1">Back</button>
+          <button onClick={onclick} type="submit" className="a a2">Save & continue</button>
         </div>
       </span>
 
