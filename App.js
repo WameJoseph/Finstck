@@ -1,16 +1,11 @@
 import React from 'react'
 import {BrowserRouter, Routes, Route } from "react-router-dom";
-// import MaterialIcon from 'react-google-material-icons';
 import Home from './Assets/Components/Home';
 import Email_confirm_page from './Assets/Components/Email_confirm_page';
-import Signup_page from './Assets/Components/Signup_page';
 import Login_page from './Assets/Components/Login_page';
 import Forgot_password_page from './Assets/Components/Forgot_password_page';
-// import logo from './logo.svg';
 import Page404 from './Assets/Components/Page404';
-import Landing_nav from "./Assets/Components/Landing_nav";
 import './App.css';
-import Homme from './Homme';
 import Forgot_password_pin from './Assets/Components/Forgot_password_pin';
 import Reset_pass from './Assets/Components/Reset_pass';
 import Reset_pass_success from './Assets/Components/Reset_pass_success';
@@ -27,7 +22,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />}></Route>
-        <Route path='/signup' element={<Signup_page />}></Route>
         <Route path='/login' element={<Login_page />}></Route>
         <Route path='/email_confirmation' element={<Email_confirm_page />}></Route>
         <Route path='/forgot_pass' element={<Forgot_password_page />}></Route>
