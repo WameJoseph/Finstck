@@ -16,6 +16,10 @@ const Auth_content = () => {
   const [personal, setPersonal] = useState(true)
   const [idInfo, setIdInfo] = useState(false)
   const [showPreview, setShowPreview] = useState(false)
+  const [stepOne, setStepOne] = useState(`last`)
+  const [stepTwo, setStepTwo] = useState(`last`)
+  const [stepThree, setStepThree] = useState(`last`)
+
   return (
     <main className='Aumain'>
         <section className='section'>
@@ -24,9 +28,9 @@ const Auth_content = () => {
                 <p className="p2">Create or accept offers at your preferred rate.</p>
 
                 <ul>
-                  <li className={ personal ? `active` : `don` }><span><i className="material-icons-outlined">account_circle</i> </span><p>Personal information { personal && <i className="material-icons ic">check</i>}</p> </li>
-                  <li className={ idInfo ? `active` : `don` }><span><i className="material-icons-outlined">payment</i> </span><p>ID information  { idInfo && <i className="material-icons ic">check</i>}</p> </li>
-                  <li className={ showPreview ? `active` : `last` }><span><i className="material-icons-outlined">text_snippet</i> </span><p>Preview  { showPreview && <i className="material-icons ic">check</i>}</p> </li>
+                  <li className={ personal ? `active` : `${stepOne}` }><span><i className="material-icons-outlined">account_circle</i> </span><p>Personal information { stepOne === `done` && <i className="material-icons ic">check</i>}</p> </li>
+                  <li className={ idInfo ? `active` : `${stepTwo}` }><span><i className="material-icons-outlined">payment</i> </span><p>ID information  { stepTwo === `done` && <i className="material-icons ic">check</i>}</p> </li>
+                  <li className={ showPreview ? `active` : `${stepThree}` }><span><i className="material-icons-outlined">text_snippet</i> </span><p>Preview  { stepThree === `done` && <i className="material-icons ic">check</i>}</p> </li>
                 </ul>
             </div>
             <div className="cnt">
@@ -34,6 +38,7 @@ const Auth_content = () => {
                 { personal && <Pid
                   backclick={(e) => {
                     e.preventDefault();
+                    setStepOne(`last`)
                     alert(`There is no where to go to!`)
                     return;
                   }} 
@@ -41,6 +46,7 @@ const Auth_content = () => {
                     e.preventDefault();
                     setPersonal(false)
                     setIdInfo(true)
+                    setStepOne(`done`)
                   }}
                   display={'flex'}
                 />}
@@ -51,11 +57,13 @@ const Auth_content = () => {
                     e.preventDefault();
                     setPersonal(true)
                     setIdInfo(false)
+                    setStepTwo(`last`)
                   }}
                   onclick={(e) => {
                     e.preventDefault();
                     setIdInfo(false)
                     setShowPreview(true)
+                    setStepTwo(`done`)
                   }}
                  display={'flex'} id="idi"/>}
 
@@ -65,10 +73,12 @@ const Auth_content = () => {
                       e.preventDefault();
                       setShowPreview(false);
                       setIdInfo(true)
+                      setStepThree(`last`)
                     }}
                     onclick={(e) => {
                       e.preventDefault();
                       alert(`There is no where to go to!`)
+                      setStepThree(`done`)
                     }}
                    display={'flex'} />}
               </div>
